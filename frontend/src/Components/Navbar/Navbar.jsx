@@ -10,6 +10,7 @@ import { useContext } from 'react';
 import { ShopContext } from '../../Context/ShopContext';
 import { useState } from 'react';
 
+//changes done to navbar.jsx for the checking develop branch
 const MyNavbar = () => {
 
     // const [menu, setMenu] = useState("home");
