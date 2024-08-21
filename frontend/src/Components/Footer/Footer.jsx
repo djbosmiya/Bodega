@@ -32,19 +32,19 @@ const Footer = () => {
                 </ul>
             </div>
             <div class="footer-social-media d-flex justify-content-center col-md-12">
-                <a class="facebook" href="https://www.facebook.com/" target="_blank">
+                <a class="facebook" href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                     <img src={facebook} alt="facebook" />
                 </a>
-                <a class="linkedin" href="https://www.linkedin.com/" target="_blank">
+                <a class="linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
                     <img src={linkedin} alt="linkedin"/>
                 </a>
-                <a class="twitter" href="https://twitter.com/?lang=en-ca" target="_blank">
+                <a class="twitter" href="https://twitter.com/?lang=en-ca" target="_blank" rel="noreferrer">
                     <img src={twitter} alt="twitter" />
                 </a>
-                <a class="instagram" href="https://www.instagram.com/" target="_blank">
+                <a class="instagram" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                     <img src={instagram} alt="instagram"/>
                 </a>
-                <a class="pinterest" href="https://www.pinterest.com/" target="_blank">
+                <a class="pinterest" href="https://www.pinterest.com/" target="_blank" rel="noreferrer">
                     <img src={pinterest} alt="pinterest"/>
                 </a>
             </div>
