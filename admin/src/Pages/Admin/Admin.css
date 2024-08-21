@@ -1,0 +1,9 @@
+.admin-section-wrap{ display: flex; }
+
+@media (min-width: 572px) and (max-width: 768.5px){
+    .admin-section-wrap{ display: block!important; }
+}
+
+@media only screen and (max-width: 572px){
+    .admin-section-wrap{ display: block!important; font-size: 14px; }
+}

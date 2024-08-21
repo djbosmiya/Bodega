@@ -1,0 +1,31 @@
+.add-product-section{ margin: 85px auto 0px auto; font-family: 'Montserrat'; }
+.add-product-wrap{ background-color: #d1ffdb; padding: 50px 100px; }
+.add-product-section .form-label{ margin-top: 25px; }
+.add-product-section .form-control, .add-product-section .form-select { outline: none!important; width: 100%!important; padding: 12px 20px!important; box-sizing: border-box!important; border: none!important; border-bottom: 2px solid #419a3f!important; border-radius: 0px!important; }
+.add-product-section .form-control:focus, .add-product-section .form-select:focus { box-shadow: none; }
+.add-product-section .upload-thumbnail{ width: 85px; border-style: solid; border-width: thin; padding: 10px;}
+.add-product-section .btn-primary{ background-color: #419a3f!important; border: none!important; color: #d1ffdb!important; padding: 12px 0px!important; text-decoration: none!important; cursor: pointer!important; width: 100%!important; margin: 25px 0px 15px 0px!important;border-radius: 0px; }
+.add-product-section .btn-primary:hover{ box-shadow: 0 10px 19px rgba(0, 0, 0, -0.7), 0 13px 16px rgba(0, 0, 0, 0.22); }
+
+@media (min-width: 768.5px) and (max-width: 991.5px){
+    .add-product-section{ margin: 50px auto 0px auto; }
+    .add-product-wrap { padding: 30px 55px!important; }
+}
+
+@media (min-width: 572px) and (max-width: 768.5px){
+    .add-product-section{ margin: 0px; }
+}
+
+@media (min-width: 425.5px) and (max-width: 572px){
+    .add-product-section{ margin: 0px; }
+    .add-product-wrap{ padding: 50px; }
+    .add-product-section .form-label{ font-size: 14px; }
+    .add-product-section .form-control, .add-product-section .form-select, .add-product-section .upload-thumbnail, .add-product-section .btn-primary{ font-size: 14px; }
+}
+
+@media screen and (max-width: 425.5px) {
+    .add-product-section{ margin: 0px; }
+    .add-product-wrap{ padding: 50px 20px; }
+    .add-product-section .form-label{ font-size: 14px; }
+    .add-product-section .form-control, .add-product-section .form-select, .add-product-section .upload-thumbnail, .add-product-section .btn-primary{ font-size: 14px; }
+}

@@ -1,0 +1,20 @@
+.login-signup-wrap{ width: 65%; background-color: #d1ffdb; border-style: none; border-radius: 5px; padding: 40px; }
+.login-signup-wrap h1{ font-family: 'Cedarville Cursive'; font-weight: 500; }
+.login-signup-wrap p{ font-family: 'Montserrat'; }
+.login-signup-inputs input[type=text], .login-signup-inputs input[type=email], .login-signup-inputs input[type=password] { outline: none; width: 100%; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border: none; border-bottom: 2px solid #419a3f; }
+.login-signup-wrap button{ background-color: #419a3f; border: none; color: #d1ffdb;; padding: 12px 0px; text-decoration: none; margin: 4px 2px; cursor: pointer; width: 100%; margin: 10px 0px 15px 0px;}
+.login-signup-wrap button:hover{ box-shadow: 0 10px 19px rgba(0, 0, 0, -0.7), 0 13px 16px rgba(0, 0, 0, 0.22); }
+.already-login span{text-decoration: none; margin-left: 5px; color: #419a3f; }
+.already-login span:hover{ text-decoration: underline; }
+.loginsignup-agree p{ margin: 0px 0px 0px 10px; }
+.logincheck{ height: 25px; width: 25px; accent-color: #419a3f; }
+
+@media (min-width: 425.5px) and (max-width: 991.5px){
+    .login-signup-wrap{ width: 85%; }
+    .login-signup-section{ font-size: 14px; }
+}
+
+@media screen and (max-width: 425.5px) {
+    .login-signup-wrap{ width: 90%; }
+    .login-signup-section{ font-size: 12px; }
+}

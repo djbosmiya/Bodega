@@ -1,0 +1,8 @@
+.admin-header{ box-shadow: 0 10px 19px rgba(0,0,0,-0.7), 0 13px 16px rgba(0,0,0,0.22) }
+.navbar{ background-color: #d1ffdb; padding: 0px!important; }
+.header .navbar { padding-top: 0px; padding-bottom: 0px;}
+.navbar-nav .nav-link { color: #419a3f; font-size: 16px; font-weight: 400; }
+.navbar-nav .nav-item:hover .nav-link{ color: #d1ffdb; }
+.navbar-cart-wrap{ margin: 0px 20px 0px 0px; }
+.cart-img-wrap{ height: fit-content; width: fit-content; margin-top: 7px; }
+.cart-img{ width: 55px; margin-bottom: 5px; }

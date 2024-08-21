@@ -1,0 +1,41 @@
+.product-detail-section{ font-family: 'Montserrat'; }
+.product-left-wrapper .product-img{ width: 80%; height: 40vw; object-fit: scale-down; }
+.product-review-wrap{ margin: 0px 0px 12px 0px; }
+.product-review-wrap img{ width: 15px; margin: 0px 4px; }
+.product-detail-right .product-right-wrapper .product-title-name{ font-family: 'Cedarville Cursive'; font-weight: 500; }
+.product-detail-right .product-right-wrapper .product-desc-wrap{ text-align: justify; }
+.product-detail-right .product-right-wrapper .product-price-wrap{ font-weight: 600; }
+.product-button-wrap{ margin-bottom: 35px; }
+.product-button-wrap .offer-button{ background-color: #419a3f; border: none; color: #d1ffdb; padding: 15px 32px; text-align: center; text-decoration: none; display:inline-block; font-size: 16px; cursor: pointer; font-weight: 600; transition-duration: 0.4s; }
+.product-button-wrap .offer-button:hover{ box-shadow: 0 10px 19px rgba(0,0,0,-0.7), 0 13px 16px rgba(0,0,0,0.22)  }
+
+
+@media (min-width: 991.5px) and (max-width: 1199.5px){
+    .product-left-wrapper .product-img { margin-top: 40px; }
+}
+
+@media (min-width: 768px) and (max-width: 991.5px){
+    .product-left-wrapper .product-img { margin-top: 90px; }
+}
+
+
+@media only screen and (max-width: 768px){
+    .product-left-wrapper {  justify-content: center; display: flex; }    
+}
+
+@media (min-width: 576px) and (max-width: 767.5px){
+    .product-left-wrapper .product-img { height: 50vw; }
+    .product-detail-display-wrapper .product-detail-right{ padding: 45px 20px 0px 20px; }
+}
+
+@media (min-width: 425.5px) and (max-width: 576px){
+    .product-left-wrapper .product-img { height: 70vw; }
+    .product-detail-display-wrapper .product-detail-right{ padding: 45px 45px 0px 45px; }
+    .product-button-wrap .offer-button { font-size: 14px; }
+}
+
+@media only screen and (max-width: 425.5px) {
+    .product-left-wrapper .product-img { height: 80vw; }
+    .product-detail-display-wrapper .product-detail-right{ padding: 45px 45px 0px 45px; }
+    .product-button-wrap .offer-button { font-size: 12px; }
+}

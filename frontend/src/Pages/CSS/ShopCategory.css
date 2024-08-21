@@ -1,0 +1,23 @@
+.product-list-wrapper .product-banner-wrap .product-banner{ width: auto; height: auto; background-repeat: repeat; object-fit: cover; }
+.product-sort-text p{ margin-left: 14px; }
+.product-sort-text span{ font-weight: 600; }
+.product-sort-button{ margin-right: 12px; border-style: solid; border-radius: 25px; border-color: #419a3f; }
+.product-sort-button p{ margin: 5px 0px 0px 15px; }
+.product-sort-button img{ width: 20px; height: fit-content; margin: 8px 15px 0px 10px; }
+
+@media (min-width: 768.5px) and (max-width: 991.5px){
+    .product-list-wrapper.container{ max-width: 850px; }
+}
+
+@media only screen and (max-width: 991.5px){
+    .product-sort-text, .product-sort-button-wrap{ width: fit-content; }
+    .product-sort-button-wrap{ margin-left: auto; }
+}
+
+@media only screen and (max-width: 425.5px) {
+    .product-sort-wrap{ flex-wrap: nowrap; }
+    .product-sort-wrap p{ font-size: 11px; }
+    .product-sort-button img{ width: 15px; }
+    .product-sort-button{margin-right: 0px;}
+}
+

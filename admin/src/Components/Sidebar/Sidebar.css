@@ -1,0 +1,22 @@
+.admin-sidebar { display: grid; grid-template-columns: auto 1fr; margin: 0; font-family:'Montserrat'; } 
+.admin-sidebar ul { padding: 20px 0; margin: 0; min-height: 100vh; min-width: 275px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; list-style: none; background: #419a3f; }
+.admin-sidebar ul li { margin-top: 45px; }
+.admin-sidebar ul li a { padding: 10px 20px; display: block; color: #fff; text-decoration: none; font-size: 20px; font-weight: 400; }
+.admin-sidebar ul li a:hover { background-color: #d1ffdb; color: #419a3f; }
+
+@media (min-width: 768.5px) and (max-width: 991.5px){
+    .admin-sidebar ul { min-width: 225px; }
+}
+
+@media (min-width: 572px) and (max-width: 768.5px){
+    .admin-sidebar { display: block; }
+    .admin-sidebar ul{ flex-direction: row; min-height: auto; }
+    .admin-sidebar ul li { margin: auto; }
+}
+
+@media only screen and (max-width: 572px){
+    .admin-sidebar { display: block; }
+    .admin-sidebar ul{ flex-direction: row; min-height: auto; }
+    .admin-sidebar ul li { margin: auto; }
+    .admin-sidebar ul li a{ font-size: 14px; }
+}

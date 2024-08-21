@@ -1,0 +1,6 @@
+.home-feature-inner-wrap{ padding-bottom: 35px; }
+.home-feature-product .slick-dots{ margin-bottom: 15px;}
+
+@media (min-width: 768.5px) and (max-width: 991.5px){
+    .home-feature-wrap.container{ max-width: 850px; }
+}

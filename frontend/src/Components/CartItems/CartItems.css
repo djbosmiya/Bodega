@@ -1,0 +1,45 @@
+.product-cart-wrapper{ font-family: 'Montserrat'; }
+.cartitems-total-promo-wrap{ margin: 0px 0px 35px 0px; }
+.cartitem-wrapper .cartitem-qty button{ background-color: #419a3f; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; }
+.cartitem-wrapper .cartitem-qty button:hover { box-shadow: 0 10px 19px rgba(0, 0, 0, -0.7), 0 13px 16px rgba(0, 0, 0, 0.22); }
+.cartitem-wrapper .cartitem-img{ width: 100px; height: auto; }
+.cartitem-wrapper .cartitem-remove-button img{ width: 25px; height: auto; margin: 0px 0px 0px 22px; }
+.cartitems-total-promo-wrap .cartitems-total-promo .cartitems-total-item{ justify-content: space-between; padding: 10px 0px; }
+.cartitems-total-promo-wrap .cartitems-total-promo button{ background-color: #419a3f; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 10px 0px 0px 0px; }
+.cartitems-total-promo-wrap .cartitems-total-promo button:hover { box-shadow: 0 10px 19px rgba(0, 0, 0, -0.7), 0 13px 16px rgba(0, 0, 0, 0.22); }
+.cartitem-promocode { margin: 75px 0px; }
+.cartitem-promocode p{ text-align: center; }
+.cartitem-promocode .cartitems-promobox{ justify-content: center; }
+.cartitems-promobox button { background-color: #419a3f; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; }
+.cartitems-promobox input[type=text]{ outline: none; border: solid; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-color: #419a3f; }
+
+@media (min-width: 768.5px) and (max-width: 991.5px){
+    .cartitems-promobox input[type=text] { outline: none; border: solid; padding: 16px 25px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; border-color: #419a3f; }
+    .cartitems-promobox button { background-color: #419a3f; border: none; color: white; padding: 15px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; }
+    .cartitem-promocode p{ font-size: 14px; }
+    .cartitems-total-promo-wrap .cartitems-total-promo button { padding: 15px 20px; font-size: 14px; }
+}
+
+@media (min-width: 572.5px) and (max-width: 768.5px){
+    .cartitems-promobox input[type=text] { outline: none; border: solid; padding: 16px 25px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; border-color: #419a3f; }
+    .cartitems-promobox button { background-color: #419a3f; border: none; color: white; padding: 15px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; }
+    .cartitem-promocode p{ font-size: 14px; }
+    .cartitems-total-promo-wrap .cartitems-total-promo button { padding: 15px 20px; font-size: 14px; }
+    .cartitem-promocode { margin: 45px 0px; }
+}
+
+@media (min-width: 425.5px) and (max-width: 572.5px){
+    .cartitems-promobox input[type=text] { outline: none; border: solid; padding: 16px 25px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; border-color: #419a3f; }
+    .cartitems-promobox button { background-color: #419a3f; border: none; color: white; padding: 15px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; }
+    .cartitem-promocode p{ font-size: 14px; }
+    .cartitem-promocode { margin: 45px 0px; }
+    .cartitems-total-promo-wrap .cartitems-total-promo button { padding: 15px 20px; font-size: 14px; }
+}
+
+@media screen and (max-width: 425.5px) {
+    .cartitems-promobox input[type=text] { outline: none; border: solid; padding: 10px 10px; text-align: center; text-decoration: none; display: inline-block; font-size: 12px; border-color: #419a3f; }
+    .cartitems-promobox button { background-color: #419a3f; border: none; color: white; padding: 15px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 12px; }
+    .cartitem-promocode p{ font-size: 12px; }
+    .cartitem-promocode { margin: 45px 0px; }
+    .cartitems-total-promo-wrap .cartitems-total-promo button { padding: 15px 20px; font-size: 12px; }
+}

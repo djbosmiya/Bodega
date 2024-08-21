@@ -1,0 +1,15 @@
+.product-description-wrap{ text-align: justify; }
+.product-description-wrap .nav-tabs .nav-item button{ border-radius: 0px; color: #419a3f; border-width: 0px; }
+.product-description-wrap .nav-tabs .nav-link.active{ background-color: #d1ffdb; }
+
+@media only screen and (max-width: 768px){
+    .product-description-wrap {  margin-top: 15px !important; }    
+}
+
+@media (min-width: 425.5px) and (max-width: 576px){
+    .product-description-wrap { padding: 0px 30px 0px 30px; }
+}
+
+@media only screen and (max-width: 425.5px) {
+    .product-description-wrap { padding: 0px 30px 0px 30px; margin-bottom: 15px!important;}
+}

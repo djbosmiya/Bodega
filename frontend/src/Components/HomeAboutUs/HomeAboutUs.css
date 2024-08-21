@@ -1,0 +1,17 @@
+.home-about-inner-wrap p, .home-about-inner-wrap a{ font-family: 'Montserrat'; }
+.home-about-section, .home-contact-section{ background-color: #d1ffdb; }
+.home-about-wrap, .home-feature-wrap, .home-contact-wrap{ padding-top: 40px; }
+.home-about-wrap h2, .home-feature-wrap h2, .home-contact-wrap h2{ text-align: center; font-weight: 600; }
+.home-about-read-more{ width: fit-content; }
+.home-about-read-more a{ text-decoration: underline; color: #419a3f; display: inline-block; padding: 12px 12px 12px 0px; text-underline-offset: 5px; font-weight: 600; }
+.home-about-read-more a:hover{ color: #054404; }
+.home-about-text{ padding: 40px; }
+.home-about-img{ padding: 40px; }
+.home-about-text-wrap p{ text-align: justify; }
+.home-about-img-wrap{ background-color: white; }
+.about-img{ padding: 40px; }
+
+@media (min-width: 768.5px) and (max-width: 991.5px){
+    .home-about-img { padding: 40px 0px 40px 35px; }
+    .home-about-text { padding: 40px 20px 40px 0px; }
+}
