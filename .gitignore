@@ -14,12 +14,12 @@ backend/.env
 frontend/.env
 
 # Build output
-admin/dist/
-admin/build/
-backend/dist/
-backend/build/
-frontend/dist/
-frontend/build/
+# admin/dist/
+# admin/build/
+# backend/dist/
+# backend/build/
+# frontend/dist/
+# frontend/build/
 
 # Local environment settings
 *.local
