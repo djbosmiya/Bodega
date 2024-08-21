@@ -1,7 +1,7 @@
 //File to write all backend code
 
 //Define the port and include the dependencies
-const port = 4000; //assign the port number
+const port = process.env.PORT || 4000; //assign the port number
 const express = require("express");//added the express
 const app = express();
 const mongoose = require("mongoose"); //added mongoose to use mongoDB 
