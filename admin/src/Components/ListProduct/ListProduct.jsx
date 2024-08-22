@@ -7,7 +7,7 @@ const ListProduct = () => {
   const [allproducts, setAllProducts] = useState([]);
 
   const fetchInfo = async () => {
-    await fetch('http://localhost:4000/all-products')
+    await fetch('https://bodegabackend.onrender.com/all-products')
     .then((res)=> res.json())
     .then((data)=>{setAllProducts(data)})
   }
@@ -17,7 +17,7 @@ const ListProduct = () => {
   })
 
   const remove_product = async (id) =>{
-    await fetch('http://localhost:4000/delete-product',{
+    await fetch('https://bodegabackend.onrender.com/delete-product',{
       method:'POST',
       headers:{
         Accept:'application/json',
