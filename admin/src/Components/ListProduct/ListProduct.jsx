@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './ListProduct.css';
 import Table from 'react-bootstrap/Table';
 import remove_icon from '../../assets/delete.png';
