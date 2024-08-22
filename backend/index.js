@@ -16,8 +16,10 @@ app.use(cors()); //using this our project will connect to express app on port 40
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string)
 mongoose.connect("mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega", { 
-    // useNewUrlParser: true, 
-    // useUnifiedTopology: true, 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 30000, // 30 seconds
+    socketTimeoutMS: 45000, // 45 seconds
     ssl: true 
 });
 
