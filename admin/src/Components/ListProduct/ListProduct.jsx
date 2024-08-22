@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ListProduct.css';
 import Table from 'react-bootstrap/Table';
 import remove_icon from '../../assets/delete.png';
@@ -7,7 +7,7 @@ const ListProduct = () => {
   const [allproducts, setAllProducts] = useState([]);
 
   const fetchInfo = async () => {
-    await fetch('https://bodega-backend-ugvx.onrender.com/all-products')
+    await fetch('http://localhost:4000/all-products')
     .then((res)=> res.json())
     .then((data)=>{setAllProducts(data)})
   }
@@ -17,7 +17,7 @@ const ListProduct = () => {
   })
 
   const remove_product = async (id) =>{
-    await fetch('https://bodega-backend-ugvx.onrender.com/delete-product',{
+    await fetch('http://localhost:4000/delete-product',{
       method:'POST',
       headers:{
         Accept:'application/json',
