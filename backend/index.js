@@ -1,7 +1,7 @@
 //File to write all backend code
 
 //Define the port and include the dependencies
-const port = process.env.PORT || 4000; //assign the port number
+const port = process.env.ADMIN_PORT || 4000;
 const express = require("express");//added the express
 const app = express();
 const mongoose = require("mongoose"); //added mongoose to use mongoDB 
@@ -11,15 +11,18 @@ const path = require("path");
 const cors = require("cors"); //added to provide the access to react project
 const { error, log } = require("console");
 
+// Load environment variables
+// Use the port from the environment, fallback to 4000
+const dbURI = process.env.ADMIN_DB_URI || "mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega"; // Use the DB URI from environment
+const baseURL = process.env.BASE_URL || `http://localhost:${port}`; // Use base URL from environment
+
 app.use(express.json())// using this whatever request we will get from response that will be automatically parsed to json
 app.use(cors()); //using this our project will connect to express app on port 4000, connect frontend to backend
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string)
-mongoose.connect("mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega", { 
+mongoose.connect(dbURI, { 
     useNewUrlParser: true, 
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 30000, // 30 seconds
-    socketTimeoutMS: 45000, // 45 seconds
+    useUnifiedTopology: true, 
     ssl: true 
 });
 
@@ -47,7 +50,7 @@ app.post('/uploads', upload.single('product'),(req, res) => {//'product is the f
     }
     res.json({
         success: 1,
-        image_url: `http://localhost:4000/images/${req.file.filename}`
+        image_url: `${baseURL}/images/${req.file.filename}`
     });
 })
 
