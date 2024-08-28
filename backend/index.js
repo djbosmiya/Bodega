@@ -34,11 +34,14 @@ app.get("/",(req,res)=>{
 
 //Image storage engine
 const storage = multer.diskStorage({ // configuration of diskStorage
-    destination: './uploads/images', //destination and filename are OBJECTS
-    filename:(req,file,cb)=>{//this configuration is arrow function to generate the file name when image is uploaded
-        return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
+    destination: (req, file, cb) => {
+        console.log(`Uploading to: ${path.join(__dirname, 'uploads/images')}`);
+        cb(null, path.join(__dirname, 'uploads/images'));
+    },
+    filename: (req, file, cb) => {
+        cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
     }
-})
+});
 
 //this is an upload function in which the above image storage congfiguration is passed
 const upload = multer({storage: storage});//storage object is passed with above configuration
