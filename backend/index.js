@@ -1,7 +1,9 @@
 //File to write all backend code
 
 //Define the port and include the dependencies
+require('dotenv').config();
 const port = process.env.PORT || 4000; //assign the port number
+const baseUrl = process.env.BASE_URL || `http://localhost:${port}`; 
 const express = require("express");//added the express
 const app = express();
 const mongoose = require("mongoose"); //added mongoose to use mongoDB 
@@ -49,7 +51,7 @@ app.post('/uploads', upload.single('product'),(req, res) => {//'product is the f
     }
     res.json({
         success: 1,
-        image_url: `https://bodegabackend.onrender.com/images/${req.file.filename}`
+        image_url: `${baseUrl}/images/${req.file.filename}`
     });
 })
 
