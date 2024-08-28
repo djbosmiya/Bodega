@@ -12,7 +12,9 @@ const cors = require("cors"); //added to provide the access to react project
 const { error, log } = require("console");
 
 app.use(express.json())// using this whatever request we will get from response that will be automatically parsed to json
-app.use(cors()); //using this our project will connect to express app on port 4000, connect frontend to backend
+app.use(cors({
+    origin: '*'
+})); //using this our project will connect to express app on port 4000, connect frontend to backend
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string)
 mongoose.connect("mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega", { 
@@ -47,7 +49,7 @@ app.post('/uploads', upload.single('product'),(req, res) => {//'product is the f
     }
     res.json({
         success: 1,
-        image_url: `https://bodega-backend-ugvx.onrender.com/images/${req.file.filename}`
+        image_url: `https://bodegabackend.onrender.com/images/${req.file.filename}`
     });
 })
 

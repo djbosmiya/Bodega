@@ -17,12 +17,12 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(()=>{
-        fetch('https://bodega-backend-ugvx.onrender.com/all-products')
+        fetch('https://bodegabackend.onrender.com/all-products')
         .then((response)=>response.json())
         .then((data)=>setAll_Product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('https://bodega-backend-ugvx.onrender.com/getcart',{
+            fetch('https://bodegabackend.onrender.com/getcart',{
                 method:'POST',
                 headers:{
                     Accept: 'application/form-data',
@@ -38,7 +38,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCartItems((prev) => ({...prev,[itemId]:prev[itemId]+1}));
         if(localStorage.getItem('auth-token')){
-            fetch('https://bodega-backend-ugvx.onrender.com/addtocart',{
+            fetch('https://bodegabackend.onrender.com/addtocart',{
                 method:'POST',
                 headers:{
                     Accept: 'application/form-data',
@@ -55,7 +55,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems((prev) => ({...prev,[itemId]:prev[itemId]-1}));
         if(localStorage.getItem('auth-token')){
-            fetch('https://bodega-backend-ugvx.onrender.com/removefromcart',{
+            fetch('https://bodegabackend.onrender.com/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept: 'application/form-data',
