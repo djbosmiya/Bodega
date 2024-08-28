@@ -17,7 +17,13 @@ const dbURI = process.env.ADMIN_DB_URI || "mongodb+srv://djbosmiyaBodega:bodegaa
 const baseURL = process.env.BASE_URL || `http://localhost:${port}`; // Use base URL from environment
 
 app.use(express.json())// using this whatever request we will get from response that will be automatically parsed to json
-app.use(cors()); //using this our project will connect to express app on port 4000, connect frontend to backend
+app.use(cors({
+    origin: [
+        'https://thebodegaadmin.netlify.app',
+        'https://thebodega.netlify.app'
+    ],
+    credentials: true
+})); //using this our project will connect to express app on port 4000, connect frontend to backend
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string)
 mongoose.connect(dbURI, { 
