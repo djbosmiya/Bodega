@@ -7,7 +7,7 @@ const HomeFeature = () => {
   const [featureProduct, setFeatureProduct] = useState([]);
 
   useEffect(() =>{
-    fetch('https://bodega-backend-ugvx.onrender.com/featureproduct')
+    fetch('https://bodegabackend.onrender.com/featureproduct')
     .then((resp)=>resp.json())//passing response to json method
     .then((data)=>setFeatureProduct(data));//sending the parse data to the setFeatureProduct function
   },[])//Square bracket to use useEffect only once
