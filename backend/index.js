@@ -1,9 +1,7 @@
 //File to write all backend code
 
 //Define the port and include the dependencies
-require('dotenv').config();
 const port = process.env.PORT || 4000; //assign the port number
-const baseUrl = process.env.BASE_URL || `http://localhost:${port}`; 
 const express = require("express");//added the express
 const app = express();
 const mongoose = require("mongoose"); //added mongoose to use mongoDB 
@@ -14,9 +12,7 @@ const cors = require("cors"); //added to provide the access to react project
 const { error, log } = require("console");
 
 app.use(express.json())// using this whatever request we will get from response that will be automatically parsed to json
-app.use(cors({
-    origin: '*'
-})); //using this our project will connect to express app on port 4000, connect frontend to backend
+app.use(cors()); //using this our project will connect to express app on port 4000, connect frontend to backend
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string)
 mongoose.connect("mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega", { 
@@ -34,34 +30,24 @@ app.get("/",(req,res)=>{
 
 //Image storage engine
 const storage = multer.diskStorage({ // configuration of diskStorage
-    destination: (req, file, cb) => {
-        console.log(`Uploading to: ${path.join(__dirname, 'uploads/images')}`);
-        cb(null, path.join(__dirname, 'uploads/images'));
-    },
-    filename: (req, file, cb) => {
-        cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
+    destination: './uploads/images', //destination and filename are OBJECTS
+    filename:(req,file,cb)=>{//this configuration is arrow function to generate the file name when image is uploaded
+        return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
     }
-});
+})
 
 //this is an upload function in which the above image storage congfiguration is passed
 const upload = multer({storage: storage});//storage object is passed with above configuration
 
 //Creating upload endpoint for getting the images
-//app.use('/images', express.static('uploads/images'))
-app.use('/images', (req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    console.log(`Serving image: ${req.url}`);
-    next();
-  }, express.static(path.join(__dirname, 'uploads/images')));
-  
+app.use('/images', express.static('uploads/images'))
 app.post('/uploads', upload.single('product'),(req, res) => {//'product is the fieldname'
     if (!req.file) {
         return res.status(400).json({ success: 0, message: 'No file uploaded' });
     }
     res.json({
         success: 1,
-        image_url: `${baseUrl}/images/${req.file.filename}`
+        image_url: `https://bodegabackend.onrender.com/images/${req.file.filename}`
     });
 })
 
