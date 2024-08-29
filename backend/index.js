@@ -1,7 +1,7 @@
 //File to write all backend code
 
 //Define the port and include the dependencies
-const port = process.env.ADMIN_PORT || 4000;
+const port = 4000; //assign the port number
 const express = require("express");//added the express
 const app = express();
 const mongoose = require("mongoose"); //added mongoose to use mongoDB 
@@ -11,22 +11,11 @@ const path = require("path");
 const cors = require("cors"); //added to provide the access to react project
 const { error, log } = require("console");
 
-// Load environment variables
-// Use the port from the environment, fallback to 4000
-const dbURI = process.env.ADMIN_DB_URI || "mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega"; // Use the DB URI from environment
-const baseURL = process.env.BASE_URL || `http://localhost:${port}`; // Use base URL from environment
-
 app.use(express.json())// using this whatever request we will get from response that will be automatically parsed to json
-app.use(cors({
-    origin: [
-        'https://thebodegaadmin.netlify.app',
-        'https://thebodega.netlify.app'
-    ],
-    credentials: true
-})); //using this our project will connect to express app on port 4000, connect frontend to backend
+app.use(cors()); //using this our project will connect to express app on port 4000, connect frontend to backend
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string)
-mongoose.connect(dbURI, { 
+mongoose.connect("mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega", { 
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
     ssl: true 
@@ -56,7 +45,7 @@ app.post('/uploads', upload.single('product'),(req, res) => {//'product is the f
     }
     res.json({
         success: 1,
-        image_url: `${baseURL}/images/${req.file.filename}`
+        image_url: `http://localhost:${port}/images/${req.file.filename}`
     });
 })
 
