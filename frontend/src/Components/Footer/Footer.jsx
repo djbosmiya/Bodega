@@ -18,33 +18,33 @@ const Footer = () => {
             <div class="footer-links col-md-12 d-flex justify-content-center">
                 <ul class="footer-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="/">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="/">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="/">Contact Us</a>
                     </li>
                 </ul>
             </div>
             <div class="footer-social-media d-flex justify-content-center col-md-12">
-                <a class="facebook" href="https://www.facebook.com/" target="_blank">
+                <a class="facebook" href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                     <img src={facebook} alt="facebook" />
                 </a>
-                <a class="linkedin" href="https://www.linkedin.com/" target="_blank">
+                <a class="linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
                     <img src={linkedin} alt="linkedin"/>
                 </a>
-                <a class="twitter" href="https://twitter.com/?lang=en-ca" target="_blank">
+                <a class="twitter" href="https://twitter.com/?lang=en-ca" target="_blank" rel="noreferrer">
                     <img src={twitter} alt="twitter" />
                 </a>
-                <a class="instagram" href="https://www.instagram.com/" target="_blank">
+                <a class="instagram" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                     <img src={instagram} alt="instagram"/>
                 </a>
-                <a class="pinterest" href="https://www.pinterest.com/" target="_blank">
+                <a class="pinterest" href="https://www.pinterest.com/" target="_blank" rel="noreferrer">
                     <img src={pinterest} alt="pinterest"/>
                 </a>
             </div>
