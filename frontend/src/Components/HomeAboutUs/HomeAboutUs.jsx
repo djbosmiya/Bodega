@@ -16,7 +16,7 @@ const HomeAboutUs = () => {
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, soluta magnam illum, tempore placeat eos adipisci voluptatem architecto vitae quo fugit ut itaque. Totam, hic animi. Repellendus distinctio dolore doloremque.</p>
                         </div>
                         <div class="home-about-read-more">
-                            <a href="#">Read More</a>
+                            <a href="/">Read More</a>
                         </div>
                     </div>
                     <div class="home-about-img col-md-6">
