@@ -37,7 +37,7 @@ const AddProduct = () => {
     formData.append('category', product.category);
     formData.append('price', product.price);
     
-    await fetch("https://bodegabackend.onrender.com/uploads",{
+    await fetch("http://localhost:4000/uploads",{
       method:'POST',
       headers:{
         Accept: 'application/json',
@@ -48,7 +48,7 @@ const AddProduct = () => {
     if(responseData.success){
       product.image = responseData.image_url;
       console.log(product);
-      await fetch('https://bodegabackend.onrender.com/add-product',{
+      await fetch('http://localhost:4000/add-product',{
         method: 'POST',
         headers:{
           Accept:'application/json',
