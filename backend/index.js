@@ -2,7 +2,7 @@
 require('dotenv').config(); // Load environment variables
 
 //Define the port and include the dependencies
-const port = process.env.ADMIN_PORT || 4000; //assign the port number
+const port = process.env.PORT || 4000; //assign the port number
 const express = require("express");//added the express
 const app = express();
 const mongoose = require("mongoose"); //added mongoose to use mongoDB 
