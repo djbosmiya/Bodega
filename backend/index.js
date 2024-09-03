@@ -2,7 +2,7 @@
 require('dotenv').config(); // Load environment variables
 
 //Define the port and include the dependencies
-const port = process.env.PORT || 4000; //assign the port number
+const port = process.env.ADMIN_PORT || 4000; //assign the port number
 const express = require("express");//added the express
 const app = express();
 const mongoose = require("mongoose"); //added mongoose to use mongoDB 
@@ -16,10 +16,9 @@ app.use(express.json())// using this whatever request we will get from response 
 app.use(cors()); //using this our project will connect to express app on port 4000, connect frontend to backend
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string-- "mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega")
-mongoose.connect("mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega", { 
+mongoose.connect(process.env.ADMIN_DB_URI, { 
     useNewUrlParser: true, 
-    useUnifiedTopology: true, 
-    ssl: true 
+    useUnifiedTopology: true
 });
 
 //API Creation to check express is running when we go to port 4000 /
