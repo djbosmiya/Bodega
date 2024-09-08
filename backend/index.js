@@ -13,7 +13,9 @@ const cors = require("cors"); //added to provide the access to react project
 const { error, log } = require("console");
 
 app.use(express.json())// using this whatever request we will get from response that will be automatically parsed to json
-app.use(cors()); //using this our project will connect to express app on port 4000, connect frontend to backend
+app.use(cors({
+    origin: ['https://thebodega.netlify.app', 'https://thebodegaadmin.netlify.app']
+  })); //using this our project will connect to express app on port 4000, connect frontend to backend
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string-- "mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega")
 mongoose.connect(process.env.ADMIN_DB_URI, { 
