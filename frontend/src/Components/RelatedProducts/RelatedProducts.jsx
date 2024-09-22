@@ -7,7 +7,7 @@ const RelatedProducts = () => {
   const [relatedProduct, setRelatedProduct] = useState([]);
 
   useEffect(() =>{
-    fetch('http://35.182.243.14:4000/featureproduct')
+    fetch('http://localhost:4000/featureproduct')
     .then((resp)=>resp.json())//passing response to json method
     .then((data)=>setRelatedProduct(data));//sending the parse data to the setFeatureProduct function
   },[])//Square bracket to use useEffect only once
