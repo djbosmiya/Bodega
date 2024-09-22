@@ -16,7 +16,7 @@ app.use(express.json())// using this whatever request we will get from response 
 app.use(cors()); //using this our project will connect to express app on port 4000, connect frontend to backend
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string-- "mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega")
-mongoose.connect(process.env.ADMIN_DB_URI, { 
+mongoose.connect("mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega", { 
     useNewUrlParser: true, 
     useUnifiedTopology: true
 });
