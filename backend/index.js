@@ -41,7 +41,7 @@ const storage = multer.diskStorage({ // configuration of diskStorage
 const upload = multer({storage: storage});//storage object is passed with above configuration
 
 //Creating upload endpoint for getting the images
-app.use('/images', express.static('uploads/images'))
+app.use('/images', express.static(path.join(__dirname, 'uploads/images')))
 app.post('/uploads', upload.single('product'),(req, res) => {//'product is the fieldname'
     if (!req.file) {
         return res.status(400).json({ success: 0, message: 'No file uploaded' });
