@@ -11,12 +11,20 @@ const multer = require("multer");// to create image storing system so whenever w
 const path = require("path");
 const cors = require("cors"); //added to provide the access to react project
 const { error, log } = require("console");
+const fs = require('fs'); // file system to check if directories exist
 
 app.use(express.json())// using this whatever request we will get from response that will be automatically parsed to json
 app.use(cors({
     origin: ['https://thebodega.netlify.app', 'https://thebodegaadmin.netlify.app'],
     credentials: true // Enable credentials if required (for cookies, auth headers, etc.)
   })); //using this our project will connect to express app on port 4000, connect frontend to backend
+
+
+// Ensure the uploads directory exists
+const uploadDir = path.join(__dirname, 'uploads/images');
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+}
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string-- "mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega")
 mongoose.connect("mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega", { 
