@@ -14,7 +14,7 @@ const AddProduct = () => {
     price:""
   })
 
-  const BASE_URL = 'https://99.79.122.107:4000';
+  const BASE_URL = 'https://99.79.122.107';
 
   const imageHandler = (e) => {
     // setImage(URL.createObjectURL(e.target.files[0]));
