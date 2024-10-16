@@ -35,7 +35,7 @@ const ShopContextProvider = (props) => {
             }).then((response)=>response.json())
             .then((data)=>setCartItems(data));
         }
-    },[])
+    },[BASE_URL])
 
     const addToCart = (itemId) => {
         setCartItems((prev) => ({...prev,[itemId]:prev[itemId]+1}));

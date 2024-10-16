@@ -12,7 +12,7 @@ const RelatedProducts = () => {
     fetch(`${BASE_URL}/featureproduct`)
     .then((resp)=>resp.json())//passing response to json method
     .then((data)=>setRelatedProduct(data));//sending the parse data to the setFeatureProduct function
-  },[])//Square bracket to use useEffect only once
+  },[BASE_URL])//Square bracket to use useEffect only once
 
   return (
     <div class="product-feature-wrap">
