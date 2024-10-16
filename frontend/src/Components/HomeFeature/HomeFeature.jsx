@@ -9,7 +9,7 @@ const HomeFeature = () => {
   const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   useEffect(() =>{
-    fetch(`${BASE_URL}/featureproduct`)
+    fetch(`${BASE_URL.replace(/\/$/, "")}/featureproduct`)
     .then((resp)=>resp.json())//passing response to json method
     .then((data)=>setFeatureProduct(data));//sending the parse data to the setFeatureProduct function
   },[BASE_URL])//Square bracket to use useEffect only once
