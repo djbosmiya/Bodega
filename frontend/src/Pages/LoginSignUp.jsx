@@ -16,10 +16,12 @@ const LoginSignUp = () => {
     setFormData({...formData,[e.target.name]:e.target.value})
   }
 
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   const login = async () => {
     console.log("Login function executed",formData);
     let responseData;
-    await fetch('http://localhost:4000/login',{
+    await fetch(`${BASE_URL}/login`,{
       method: 'POST',
       headers:{
         Accept: 'application/form-data',
@@ -40,7 +42,7 @@ const LoginSignUp = () => {
   const signup = async () => {
     console.log("Signup function executed",formData);
     let responseData;
-    await fetch('http://localhost:4000/signup',{
+    await fetch(`${BASE_URL}/signup`,{
       method: 'POST',
       headers:{
         Accept: 'application/form-data',

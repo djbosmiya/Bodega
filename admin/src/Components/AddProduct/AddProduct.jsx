@@ -14,6 +14,8 @@ const AddProduct = () => {
     price:""
   })
 
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   const imageHandler = (e) => {
     // setImage(URL.createObjectURL(e.target.files[0]));
     const file = e.target.files[0];
@@ -37,7 +39,7 @@ const AddProduct = () => {
     formData.append('category', product.category);
     formData.append('price', product.price);
     
-    await fetch("https://99.79.127.229/uploads",{
+    await fetch(`${BASE_URL}/uploads`,{
       method:'POST',
       headers:{
         Accept: 'application/json',
@@ -48,7 +50,7 @@ const AddProduct = () => {
     if(responseData.success){
       product.image = responseData.image_url;
       console.log(product);
-      await fetch('https://99.79.127.229/add-product',{
+      await fetch(`${BASE_URL}/add-product`,{
         method: 'POST',
         headers:{
           Accept:'application/json',
