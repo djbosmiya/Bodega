@@ -18,8 +18,10 @@ const fs = require('fs'); // file system to check if directories exist
 app.use(express.json())// using this whatever request we will get from response that will be automatically parsed to json
 app.use(cors({
     origin: ['https://thebodega.netlify.app', 'https://thebodegaadmin.netlify.app'],
-    credentials: true // Enable credentials if required (for cookies, auth headers, etc.)
-  })); //using this our project will connect to express app on port 4000, connect frontend to backend
+    credentials: true, // Enable credentials if required (for cookies, auth headers, etc.)
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+})); //using this our project will connect to express app on port 4000, connect frontend to backend
 
 
 // Ensure the uploads directory exists
