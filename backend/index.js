@@ -2,7 +2,9 @@
 require('dotenv').config(); // Load environment variables
 
 //Define the port and include the dependencies
-const port = process.env.ADMIN_PORT || 4000; //assign the port number
+const port = process.env.ADMIN_PORT || 4000; //assign the port number'
+const adminDbUri = process.env.ADMIN_DB_URI || 'mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega';
+const baseUrl = process.env.REACT_APP_BASE_URL || 'https://99.79.122.107';
 const express = require("express");//added the express
 const app = express();
 const mongoose = require("mongoose"); //added mongoose to use mongoDB 
@@ -27,7 +29,7 @@ if (!fs.existsSync(uploadDir)) {
 }
 
 //Database connection with mongoDB(Connects the mongoDB with express.js using the connection string-- "mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega")
-mongoose.connect("mongodb+srv://djbosmiyaBodega:bodegaadmin@cluster0.putogjq.mongodb.net/bodega", { 
+mongoose.connect(adminDbUri, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true
 });
@@ -56,7 +58,7 @@ app.post('/uploads', upload.single('product'),(req, res) => {//'product is the f
     }
     res.json({
         success: 1,
-        image_url: `https://99.79.127.229/images/${req.file.filename}`
+        image_url: `${baseUrl}/images/${req.file.filename}`
     });
 })
 

@@ -6,8 +6,10 @@ import Item from '../Item/Item';
 const RelatedProducts = () => {
   const [relatedProduct, setRelatedProduct] = useState([]);
 
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   useEffect(() =>{
-    fetch('https://99.79.127.229/featureproduct')
+    fetch(`${BASE_URL}/featureproduct`)
     .then((resp)=>resp.json())//passing response to json method
     .then((data)=>setRelatedProduct(data));//sending the parse data to the setFeatureProduct function
   },[])//Square bracket to use useEffect only once

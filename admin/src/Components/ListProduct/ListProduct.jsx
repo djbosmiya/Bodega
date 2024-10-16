@@ -6,8 +6,10 @@ import remove_icon from '../../assets/delete.png';
 const ListProduct = () => {
   const [allproducts, setAllProducts] = useState([]);
 
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   const fetchInfo = async () => {
-    await fetch('https://99.79.127.229/all-products')
+    await fetch(`${BASE_URL}/all-products`)
     .then((res)=> res.json())
     .then((data)=>{setAllProducts(data)})
   }
@@ -17,7 +19,7 @@ const ListProduct = () => {
   })
 
   const remove_product = async (id) =>{
-    await fetch('https://99.79.127.229/delete-product',{
+    await fetch(`${BASE_URL}/delete-product`,{
       method:'POST',
       headers:{
         Accept:'application/json',
