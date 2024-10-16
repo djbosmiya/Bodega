@@ -6,7 +6,7 @@ import remove_icon from '../../assets/delete.png';
 const ListProduct = () => {
   const [allproducts, setAllProducts] = useState([]);
 
-  const BASE_URL = process.env.REACT_APP_BASE_URL;
+  const BASE_URL = 'http://99.79.122.107:4000/';
 
   const fetchInfo = async () => {
     await fetch(`${BASE_URL}/all-products`)
