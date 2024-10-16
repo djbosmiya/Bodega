@@ -12,7 +12,7 @@ const HomeFeature = () => {
     fetch(`${BASE_URL}/featureproduct`)
     .then((resp)=>resp.json())//passing response to json method
     .then((data)=>setFeatureProduct(data));//sending the parse data to the setFeatureProduct function
-  },[])//Square bracket to use useEffect only once
+  },[BASE_URL])//Square bracket to use useEffect only once
   return (
     <section className="home-feature-product">
         <div className="home-feature-wrap container">
